@@ -19,3 +19,11 @@ suites:
       inspec_tests:
         - test/recipes
     attributes:
+
+  - name: install_pip
+    run_list:
+      - recipe[django::install_pip]
+    verifier:
+      inspec_tests:
+        - test/recipes/install_pip.rb
+    attributes:
