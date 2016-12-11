@@ -6,4 +6,9 @@
 
 package 'python3-pip'
 
-execute 'pip3 install django'
+#execute 'pip3 install django'
+#hash out the above execute step, to use the custom resource pip
+
+pip 'django' do
+  action :install
+end
