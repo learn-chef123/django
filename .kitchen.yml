@@ -27,11 +27,19 @@ suites:
       inspec_tests:
         - test/recipes/install_pip.rb
     attributes:
-      
+
   - name: install_virtualenv
     run_list:
       - recipe[django::install_virtualenv]
     verifier:
       inspec_tests:
         - test/recipes/install_virtualenv.rb
+    attributes:
+
+  - name: install_dev_ver
+    run_list:
+      - recipe[django::install_dev_ver]
+    verifier:
+      inspec_tests:
+        - test/recipes/install_dev_ver.rb
     attributes:
